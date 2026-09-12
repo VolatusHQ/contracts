@@ -641,12 +641,18 @@ Chosen because a variance index samples per block: ~1s blocks give ~86,400 obser
 
 | Contract | Address |
 |---|---|
-| **`VolatusOracle`** — the integration point | [`0xd7602c41f01dD3a91F8768869D95f9529a112a7c`](https://sepolia.uniscan.xyz/address/0xd7602c41f01dD3a91F8768869D95f9529a112a7c) |
+| **`VolatusOracle`** — the integration point | [`0x51f7D166FE0C040F9e9Ee7236Bc3dC3E2183B33a`](https://sepolia.uniscan.xyz/address/0x51f7D166FE0C040F9e9Ee7236Bc3dC3E2183B33a) |
 | **`VolatusHook`** — the v4 hook | [`0x9215C247Ec3C0082A4bfC26515427c2737D1d040`](https://sepolia.uniscan.xyz/address/0x9215C247Ec3C0082A4bfC26515427c2737D1d040) |
 | **`VolatusVault`** — collateral and settlement | [`0xF45894c8384c440FC63Da67Bc6050e77FcaF4e83`](https://sepolia.uniscan.xyz/address/0xF45894c8384c440FC63Da67Bc6050e77FcaF4e83) |
 | `VarianceToken` implementation (cloned per leg) | `0xBE28c060b7F6Cb8C055430eA1CE75d8C577b2d21` |
 
 The hook's address is not arbitrary — its low bits encode the permissions it declares. `0x…d040` ends in `0b01000001000000`: `AFTER_INITIALIZE` and `AFTER_SWAP` set, every return-delta bit clear.
+
+`VolatusOracle` has been redeployed twice, both times because its immutable `curator` (the
+only address that can call `registerVolPool`) turned out to be a key nobody held — see
+`script/RedeployOracle.s.sol` and `packages/onchain/src/addresses.ts` for the full history.
+The address above (2026-09-12) sets `curator` to a wallet the `roller` backend service holds,
+so it can register every future epoch's vol pool itself.
 
 ### Epoch 1
 
