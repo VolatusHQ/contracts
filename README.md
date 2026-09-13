@@ -334,9 +334,12 @@ Test assets: mWETH [`0xde45563c9c596fC761e3a18ABB66aE51904de0F4`](https://sepoli
 
 ### Arc Testnet (chain ID 5042002)
 
+`VolatusStream` is verified on [Arcscan](https://testnet.arcscan.app) (Blockscout) — source, ABI,
+and Read/Write Contract tabs are live at the link below.
+
 | Contract | Address |
 |---|---|
-| `VolatusStream` | `0xE44b6a47b29b097CE5c20BF17830cfb5df734354` |
+| `VolatusStream` | [`0xE44b6a47b29b097CE5c20BF17830cfb5df734354`](https://testnet.arcscan.app/address/0xE44b6a47b29b097CE5c20BF17830cfb5df734354) |
 | USDC (ERC-20) | `0x3600000000000000000000000000000000000000` |
 
 ### Read implied volatility
