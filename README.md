@@ -309,12 +309,15 @@ view for accounting.
 
 ### Unichain Sepolia (chain ID 1301)
 
+All four contracts below are verified on Uniscan — source, ABI, and Read/Write Contract tabs are
+live at the links.
+
 | Contract | Address |
 |---|---|
-| `VolatusHook` | [`0x9215C247Ec3C0082A4bfC26515427c2737D1d040`](https://sepolia.uniscan.xyz/address/0x9215C247Ec3C0082A4bfC26515427c2737D1d040) |
-| `VolatusVault` | [`0xF45894c8384c440FC63Da67Bc6050e77FcaF4e83`](https://sepolia.uniscan.xyz/address/0xF45894c8384c440FC63Da67Bc6050e77FcaF4e83) |
-| `VolatusOracle` | [`0x51f7D166FE0C040F9e9Ee7236Bc3dC3E2183B33a`](https://sepolia.uniscan.xyz/address/0x51f7D166FE0C040F9e9Ee7236Bc3dC3E2183B33a) |
-| `VarianceToken` implementation | [`0xBE28c060b7F6Cb8C055430eA1CE75d8C577b2d21`](https://sepolia.uniscan.xyz/address/0xBE28c060b7F6Cb8C055430eA1CE75d8C577b2d21) |
+| `VolatusHook` | [`0x9215C247Ec3C0082A4bfC26515427c2737D1d040`](https://sepolia.uniscan.xyz/address/0x9215C247Ec3C0082A4bfC26515427c2737D1d040#code) |
+| `VolatusVault` | [`0xF45894c8384c440FC63Da67Bc6050e77FcaF4e83`](https://sepolia.uniscan.xyz/address/0xF45894c8384c440FC63Da67Bc6050e77FcaF4e83#code) |
+| `VolatusOracle` | [`0x51f7D166FE0C040F9e9Ee7236Bc3dC3E2183B33a`](https://sepolia.uniscan.xyz/address/0x51f7D166FE0C040F9e9Ee7236Bc3dC3E2183B33a#code) |
+| `VarianceToken` implementation | [`0xBE28c060b7F6Cb8C055430eA1CE75d8C577b2d21`](https://sepolia.uniscan.xyz/address/0xBE28c060b7F6Cb8C055430eA1CE75d8C577b2d21#code) |
 | Measured pool id (mWETH / mUSDC, fee 3000, spacing 60) | `0xc60f25d0a8e2ec722cc0d7f2cff8179340bd5a034351319ada88292d23f21b89` |
 
 The hook address ends in `…d040`; its low 14 bits set exactly `AFTER_INITIALIZE` (bit 12) and
@@ -324,8 +327,8 @@ Uniswap v4 infrastructure used: PoolManager `0x00B036B58a818B1BC34d502D3fE730Db7
 PositionManager `0xf969Aee60879C54bAAed9F3eD26147Db216Fd664`, StateView
 `0xc199F1072a74D4e905ABa1A84d9a45E2546B6222`, Permit2 `0x000000000022D473030F116dDEE9F6B43aC78BA3`.
 
-Test assets: mWETH `0xde45563c9c596fC761e3a18ABB66aE51904de0F4` and mUSDC
-`0xd00FaDdE160cecbB3ad946BE3542b9553c5B582B` (open mint), v4-core `PoolSwapTest`
+Test assets: mWETH [`0xde45563c9c596fC761e3a18ABB66aE51904de0F4`](https://sepolia.uniscan.xyz/address/0xde45563c9c596fC761e3a18ABB66aE51904de0F4#code) and mUSDC
+[`0xd00FaDdE160cecbB3ad946BE3542b9553c5B582B`](https://sepolia.uniscan.xyz/address/0xd00FaDdE160cecbB3ad946BE3542b9553c5B582B#code) (open mint, also verified), v4-core `PoolSwapTest`
 `0xF8B077ccC960089FDC0d633E90a6A991cbdB5EB8` and `PoolModifyLiquidityTest`
 `0xc05F9C18ad53A4AF485Bf34840E3B062462546d6`.
 
